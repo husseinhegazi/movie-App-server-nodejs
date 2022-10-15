@@ -43,10 +43,11 @@ module.exports.login = (req, res, next) => {
     })
     .catch((error) => next(error));
 };
+
 //logout
 module.exports.logout = (req, res, next) => {
   return res
     .clearCookie("access_token")
     .status(200)
-    .json({ message: "Successfully logged out" });
+    .json({ message: "Logged out successfully" });
 };

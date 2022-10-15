@@ -10,6 +10,6 @@ router
 
   .post(loginValidation, errorMW, loginController.login);
 
-router.route("/logout").get(authMW,loginController.logout);
+router.route("/logout").get(authMW, loginController.logout);
 
 module.exports = router;
