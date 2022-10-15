@@ -31,7 +31,7 @@ module.exports.login = (req, res, next) => {
                   secure: process.env.NODE_ENV === "protected",
                 })
                 .status(200)
-                .json({ token });
+                .json({ message: "Logged in successfully" });
             }
           })
           .catch((error) => {
@@ -42,4 +42,11 @@ module.exports.login = (req, res, next) => {
       }
     })
     .catch((error) => next(error));
+};
+//logout
+module.exports.logout = (req, res, next) => {
+  return res
+    .clearCookie("access_token")
+    .status(200)
+    .json({ message: "Successfully logged out" });
 };

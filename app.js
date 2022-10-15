@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 require("dotenv").config();
-const path = require("path");
 const cookieParser = require("cookie-parser");
 //import multer mw
 const myMulter = require("./MW/imageMW");
+const path = require("path");
 //import routes
 const userRoute = require("./routes/userRoute");
 const loginRoute = require("./routes/loginRoute");
